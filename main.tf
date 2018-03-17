@@ -32,3 +32,9 @@ resource "aws_instance" "web" {
     Name = "HelloWorld"
   }
 }
+
+resource "null_resource" "cluster_new1" {
+  # Changes to any instance of the cluster requires re-provisioning
+  triggers = {}
+
+}
