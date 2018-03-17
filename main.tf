@@ -36,7 +36,7 @@ resource "aws_instance" "web" {
 resource "null_resource" "cluster_new1" {
   # Changes to any instance of the cluster requires re-provisioning
   triggers = {
-    "tst"
+    zzz = "tst"
   }
 
 }
