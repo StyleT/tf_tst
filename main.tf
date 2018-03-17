@@ -32,6 +32,7 @@ resource "aws_instance" "web" {
     Name = "HelloWorld"
     app = "tfe"
   }
+  security_groups = ["sg-9ee5e1f0"]
 }
 
 resource "null_resource" "cluster_new2" {
