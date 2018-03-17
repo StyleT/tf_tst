@@ -34,6 +34,12 @@ resource "aws_instance" "web" {
   }
 }
 
+resource "null_resource" "cluster_new2" {
+  # Changes to any instance of the cluster requires re-provisioning
+  triggers = {}
+
+}
+
 resource "null_resource" "cluster_new1" {
   # Changes to any instance of the cluster requires re-provisioning
   triggers = {
