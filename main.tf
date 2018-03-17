@@ -24,16 +24,16 @@ data "aws_ami" "ubuntu" {
   owners = ["099720109477"] # Canonical
 }
 
-resource "aws_instance" "web" {
-  ami           = "${data.aws_ami.ubuntu.id}"
-  instance_type = "t2.micro"
+# resource "aws_instance" "web" {
+#   ami           = "${data.aws_ami.ubuntu.id}"
+#   instance_type = "t2.micro"
 
-  tags {
-    Name = "HelloWorld"
-    app = "tfe"
-  }
-  //security_groups = ["sg-9ee5e1f0"]
-}
+#   tags {
+#     Name = "HelloWorld"
+#     app = "tfe"
+#   }
+#   //security_groups = ["sg-9ee5e1f0"]
+# }
 
 resource "null_resource" "cluster_new2" {
   # Changes to any instance of the cluster requires re-provisioning
