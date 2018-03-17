@@ -38,3 +38,9 @@ resource "null_resource" "cluster_new2" {
   triggers = {}
 
 }
+
+resource "null_resource" "cluster_new1" {
+  # Changes to any instance of the cluster requires re-provisioning
+  triggers = {}
+
+}
