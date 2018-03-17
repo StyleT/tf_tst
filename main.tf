@@ -1,3 +1,6 @@
+variable "aws_access_key" {}
+variable "aws_secret_key" {}
+
 # Configure the AWS Provider
 provider "aws" {
   access_key = "${var.aws_access_key}"
@@ -29,4 +32,3 @@ resource "aws_instance" "web" {
     Name = "HelloWorld"
   }
 }
-//bug??
